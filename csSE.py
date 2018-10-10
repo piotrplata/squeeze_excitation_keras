@@ -16,7 +16,7 @@ def cSE(input_features, ratio = 16):
     return excited
 
 #both 
-def scSE(input_feature, ratio = 16):
-    _cse = sSE(input_features, ratio)
-    _sse = cSE(input_features)
+def scSE(input_features, ratio = 16):
+    _cse = sSE(input_features)
+    _sse = cSE(input_features, ratio)
     return add([_cse,_sse])
